@@ -2,13 +2,26 @@ pragma solidity 0.4.24;
 
 
 contract Campaign {
+    struct Request {
+        string description;
+        uint value;
+        address recipient;
+        bool complete;
+    }
+
+    Request[] public requests;
     address public manager;
     uint public minimumContribution;
     address[] public approvers;
 
+    modifier restricted() {
+        require(msg.sender == manager);
+        _;
+    }
+    
     constructor(uint minimum) public {
-        manager = msg.sender;
-        minimumContribution = minimum;
+            manager = msg.sender;
+            minimumContribution = minimum;
     }
 
     function contribute() public payable {
