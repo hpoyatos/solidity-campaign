@@ -16,9 +16,9 @@ beforeEach(async() => {
 
   factory = await new web3.eth.Contract(JSON.parse(compiledFactory.interface))
   .deploy({data: compiledFactory.bytecode})
-  .send({from: accounts[0], gas: '1000000'});
+  .send({from: accounts[0], gas: '3500000'});
 
-  await factory.methods.createCampaign('1000000000000000000').send({
+  await factory.methods.createCampaign('Project Name', '1000000000000000000').send({
     from: accounts[0],
     gas: '1000000'
   });
