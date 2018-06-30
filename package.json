@@ -1,0 +1,27 @@
+{
+  "name": "solidity-campaign",
+  "version": "1.0.0",
+  "description": "Contract tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpoyatos/solidity-campaign.git"
+  },
+  "author": "Henrique Poyatos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hpoyatos/solidity-campaign/issues"
+  },
+  "homepage": "https://github.com/hpoyatos/solidity-campaign#readme",
+  "dependencies": {
+    "fs-extra": "^6.0.1",
+    "ganache-cli": "^6.1.4",
+    "mocha": "^5.2.0",
+    "solc": "^0.4.24",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "^1.0.0-beta.26"
+  }
+}
