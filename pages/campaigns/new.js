@@ -10,7 +10,8 @@ class CampaignNew extends Component {
       projectName: '',
       minimumContribution: '',
       errorMessage: '',
-      loading: false
+      loading: false,
+      errorMessage: ''
   };
 
   onSubmit = async (event) => {
